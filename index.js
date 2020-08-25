@@ -38,6 +38,9 @@ app.use("/home/library", require("./routes/libraryRouter"));
 // Set up routes for wishlist functions
 app.use("/home/wishlist", require("./routes/wishlistRouter"));
 
+// Set up routes for recommendations functions
+app.use("/home/recommendations", require("./routes/recommendationsRouter"));
+
 // Serve static assets
 if (process.env.NODE_ENV === "production") {
   // set static folder
