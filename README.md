@@ -11,7 +11,13 @@ https://book-case-sa.herokuapp.com/
 	the front end and backend together on heroku.
 	
 	The application uses the Google Books API for getting information on books by their
-	ISBN, and to make recommendations (which is under construction).
+	ISBN, and to make recommendations.
 	
-	The application is still under constructions, and I will continue to try to improve 
+	The application is still under construction, and I will continue to try to improve 
 	the code.
+
+## Technologies Used
+	- MERN Stack [MongoDB, Express.js, React, Node.js]
+	- VScode
+	- Postman for testing backend routes
+	- Git and Github for version control
