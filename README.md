@@ -10,6 +10,8 @@ https://book-case-sa.herokuapp.com/
 	the project I found it best to set that file structure as is here, and deploy 
 	the front end and backend together on heroku.
 	
+	[The BookCase repo is located here: https://github.com/SAbbas2018/BookCase]
+	
 	The application uses the Google Books API for getting information on books by their
 	ISBN, and to make recommendations.
 	
