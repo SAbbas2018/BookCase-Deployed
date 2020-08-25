@@ -3,14 +3,15 @@
 ## Link to the Website
 https://book-case-sa.herokuapp.com/
 
+## Link to the BookCase repo used for the development and testing of the application
+https://github.com/SAbbas2018/BookCase
+
 ## Description
 	This is the code for a MERN stack application that is deployed on heroku.
 	
 	I first did all the work in my BookCase repo, however when it came to deploying 
 	the project I found it best to set that file structure as is here, and deploy 
 	the front end and backend together on heroku.
-	
-	[The BookCase repo is located here: https://github.com/SAbbas2018/BookCase]
 	
 	The application uses the Google Books API for getting information on books by their
 	ISBN, and to make recommendations.
