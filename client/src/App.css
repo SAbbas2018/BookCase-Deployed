@@ -1,0 +1,152 @@
+/* Margin: t r b l */
+/* Page styles */
+.page-title {
+  /* margin: auto; */
+  /* padding: 8px 0; */
+  width: 80%;
+}
+.login-form {
+  width: 80%;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  margin-top: 10px;
+}
+.register-form {
+  width: 80%;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  margin-top: 10px;
+}
+
+input[type="text"]::placeholder {
+  text-align: center;
+}
+/* .form-container {
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 8px;
+  /* background-color: gray; */
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  margin: auto 0 auto 0;
+  width: 33%;
+}
+.header-logo-item {
+  margin: 5px;
+}
+.header-title {
+  width: 33%;
+  text-align: center;
+  margin: auto 0 auto 0;
+}
+.auth-buttons {
+  width: 33%;
+}
+.welcome-header {
+  text-align: center;
+}
+
+/* Error Notice */
+.error-notice {
+  margin: auto;
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+}
+.error-notice-message {
+  margin: auto 8px;
+  text-align: center;
+}
+.error-notice-button {
+  border-radius: 10%;
+  margin: auto;
+}
+
+/* Home page when logged in */
+.home-page {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.component-title {
+  width: 80%;
+  margin: auto auto;
+  text-align: center;
+}
+/* Library Container */
+.library-container {
+  display: flex;
+  flex-direction: column;
+  /* t r b l */
+  /* margin: 0 0 10px 0; */
+}
+.library-container form {
+  margin-top: 10px;
+}
+
+.main-homepage-container {
+  justify-content: center;
+  display: flex;
+  margin: 0 0 10px 0;
+}
+
+/* Book Container Styles */
+.books-container {
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.book-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 2px;
+}
+.book-cover {
+  width: 40%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  margin: auto;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 40%;
+}
+
+.book-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+}
+
+.book-title {
+  font-style: italic;
+}
+
+.button-container {
+  margin: auto;
+}
+
+.book-link {
+  margin: auto;
+  margin-top: 2px;
+}
