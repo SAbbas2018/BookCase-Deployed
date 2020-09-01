@@ -18,53 +18,40 @@ export default function AuthOptions() {
   return (
     <div className="auth-buttons">
       {userData.user ? (
-        <ul className="nav justify-content-end">
-          <li className="nav-item">
+        <div className="nav auth-nav">
+          <div className="nav-item">
             <Link to="/">
               <button type="button" className="btn btn-info">
                 Home
               </button>
             </Link>
-          </li>
-          <li className="nav-item">
+          </div>
+          <div className="nav-item">
             <button onClick={logout} className="btn btn-info">
               Log Out
             </button>
-          </li>
-        </ul>
+          </div>
+        </div>
       ) : (
-        // <div className="btn-group" role="group" aria-label="Basic example">
-        //   <Link to="/">
-        //     <button type="button" className="btn btn-info">
-        //       Home
-        //     </button>
-        //   </Link>
-        //   <button onClick={register} type="button" className="btn btn-info">
-        //     Register
-        //   </button>
-        //   <button onClick={login} type="button" className="btn btn-info">
-        //     Log In
-        //   </button>
-        // </div>
-        <ul className="nav justify-content-end">
-          <li className="nav-item">
+        <div className="nav auth-nav">
+          <div className="nav-item">
             <Link to="/">
               <button type="button" className="btn btn-info">
                 Home
               </button>
             </Link>
-          </li>
-          <li className="nav-item">
+          </div>
+          <div className="nav-item">
             <button onClick={register} type="button" className="btn btn-info">
               Register
             </button>
-          </li>
-          <li className="nav-item">
+          </div>
+          <div className="nav-item">
             <button onClick={login} type="button" className="btn btn-info">
               Log In
             </button>
-          </li>
-        </ul>
+          </div>
+        </div>
       )}
     </div>
   );

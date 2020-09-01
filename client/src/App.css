@@ -58,6 +58,7 @@ input[type="text"]::placeholder {
 
 /* Error Notice */
 .error-notice {
+  width: 80%;
   margin: auto;
   display: flex;
   padding: 8px;
@@ -65,10 +66,12 @@ input[type="text"]::placeholder {
 }
 .error-notice-message {
   margin: auto 8px;
+  flex-grow: 8;
   text-align: center;
 }
 .error-notice-button {
   border-radius: 10%;
+  flex-grow: 0;
   margin: auto;
 }
 
@@ -157,4 +160,53 @@ input[type="text"]::placeholder {
   flex-direction: column;
   margin: auto;
   padding: 5px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    padding: 8px;
+  }
+  .header-logo {
+    margin: auto 0 auto 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-logo-item {
+    margin: 5px;
+  }
+  .header-title {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .auth-buttons {
+    width: 75%;
+    margin: 3px auto 0 auto;
+  }
+  .auth-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main-homepage-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .library,
+  .wishlist,
+  .recommendation {
+    margin: 6px 5px 3px 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .auth-nav {
+    justify-content: flex-end;
+    padding: 2px;
+  }
 }
