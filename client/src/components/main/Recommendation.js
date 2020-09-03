@@ -19,7 +19,7 @@ export default class Recommendation extends Component {
     const getRecom = async () => {
       try {
         let recommendationsRes = await Axios.post(
-          "/home/recommendations/getBooks",
+          "http://localhost:5000/home/recommendations/getBooks",
           { email: email },
           {
             headers: { "Content-Type": "application/JSON" },
@@ -68,13 +68,15 @@ export default class Recommendation extends Component {
           />
         )}
         <div className="books-container bg-light">
-          {this.state.recommendation.map((book, index) => {
-            return (
-              <div key={index}>
-                <RecommendationBook book={book} />
-              </div>
-            );
-          })}
+          {typeof this.state.recommendation !== "undefined"
+            ? this.state.recommendation.map((book, index) => {
+                return (
+                  <div key={index}>
+                    <RecommendationBook book={book} />
+                  </div>
+                );
+              })
+            : null}
         </div>
       </div>
     );

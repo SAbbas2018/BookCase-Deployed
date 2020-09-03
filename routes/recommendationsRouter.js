@@ -45,7 +45,7 @@ router.post("/getBooks", async (req, res) => {
         alreadyAddedBooks.add(book.bookTitle);
       });
     }
-
+    let sent = false;
     // If authorList is empty now, it means there were no books
     // in the library or wishlist
     if (authorList.length == 0) {
@@ -53,6 +53,7 @@ router.post("/getBooks", async (req, res) => {
         message:
           "There are no books in your library or wishlist yet, please add books to get recommendations",
       });
+      sent = true;
     }
 
     // loop through authorList and make api calls to google books to books by the authors
@@ -80,7 +81,9 @@ router.post("/getBooks", async (req, res) => {
       }
     }
     // console.log(books);
-    res.status(200).json({ books });
+    if (sent == false) {
+      res.status(200).json({ books });
+    }
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: err.message });
