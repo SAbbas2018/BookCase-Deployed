@@ -16,9 +16,11 @@ export default class LibraryClass extends Component {
     this.setError = this.setError.bind(this);
     this.setIsbn = this.setIsbn.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    // this.changed = this.props.changed.bind(this);
     this.bookRemoved = this.bookRemoved.bind(this);
   }
   componentDidMount() {
+    // console.log(this.props);
     const { userData } = this.context;
     this.setState((prevState) => {
       return {
@@ -57,6 +59,7 @@ export default class LibraryClass extends Component {
     });
   }
   onSubmit = async (e) => {
+    const { userData, setUserData } = this.context;
     e.preventDefault();
     try {
       //   console.log(isbn);
@@ -88,6 +91,10 @@ export default class LibraryClass extends Component {
         },
         { headers: { "Content-Type": "application/JSON" } }
       );
+
+      let user = { ...userData.user, library: this.state.lib };
+      setUserData({ ...userData, user });
+      // this.props.setUpdate(!this.props.update);
     } catch (err) {
       this.setError("Incorrect ISBN entered or Book Not Found");
       console.log(err);

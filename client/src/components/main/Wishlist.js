@@ -57,6 +57,7 @@ export default class Wishlist extends Component {
     });
   }
   onSubmit = async (e) => {
+    const { userData, setUserData } = this.context;
     e.preventDefault();
     try {
       //   console.log(isbn);
@@ -87,6 +88,8 @@ export default class Wishlist extends Component {
         },
         { headers: { "Content-Type": "application/JSON" } }
       );
+      let user = { ...userData.user, wishlist: this.state.wishlist };
+      setUserData({ ...userData, user });
     } catch (err) {
       this.setError("Incorrect ISBN entered or Book Not Found");
       console.log(err);
