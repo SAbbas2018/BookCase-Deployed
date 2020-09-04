@@ -162,6 +162,12 @@ input[type="text"]::placeholder {
   padding: 5px;
 }
 
+.library,
+.wishlist,
+.recommendation {
+  flex-grow: 1;
+  width: 33%;
+}
 /* Media Queries */
 @media only screen and (max-width: 600px) {
   .header {
@@ -201,6 +207,7 @@ input[type="text"]::placeholder {
   .wishlist,
   .recommendation {
     margin: 6px 5px 3px 5px;
+    width: 100%;
   }
 }
 
@@ -208,5 +215,11 @@ input[type="text"]::placeholder {
   .auth-nav {
     justify-content: flex-end;
     padding: 2px;
+  }
+  .library,
+  .wishlist,
+  .recommendation {
+    margin: 6px 5px 3px 5px;
+    width: 100%;
   }
 }
