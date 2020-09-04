@@ -3,7 +3,8 @@ import { useHistory } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import LibraryClass from "./main/LibraryClass.js";
 import Wishlist from "./main/Wishlist.js";
-import Recommendation from "./main/Recommendation.js";
+// import Recommendation from "./main/Recommendation.js";
+import FunctionalRecommendations from "./main/FunctionalRecommendations";
 export default function Home() {
   const { userData } = useContext(UserContext);
   const history = useHistory();
@@ -35,7 +36,8 @@ export default function Home() {
           </div>
           <div className="recommendation">
             <h3 className="component-title">Recommendations</h3>
-            <Recommendation props={userData.user.lib} />
+            {/* <Recommendation props={userData.user.lib} /> */}
+            <FunctionalRecommendations />
           </div>
         </div>
       )}

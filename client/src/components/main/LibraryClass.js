@@ -48,6 +48,7 @@ export default class LibraryClass extends Component {
   }
 
   bookRemoved(name) {
+    const { userData, setUserData } = this.context;
     let newLib = this.state.lib.filter((book) => {
       return book.bookTitle !== name;
     });
@@ -57,6 +58,8 @@ export default class LibraryClass extends Component {
         lib: newLib,
       };
     });
+    let user = { ...userData.user, library: newLib };
+    setUserData({ ...userData, user });
   }
   onSubmit = async (e) => {
     const { userData, setUserData } = this.context;

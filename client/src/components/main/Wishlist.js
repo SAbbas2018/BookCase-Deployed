@@ -46,6 +46,7 @@ export default class Wishlist extends Component {
   }
 
   bookRemoved(name) {
+    const { userData, setUserData } = this.context;
     let newWishlist = this.state.wishlist.filter((book) => {
       return book.bookTitle !== name;
     });
@@ -55,6 +56,8 @@ export default class Wishlist extends Component {
         wishlist: newWishlist,
       };
     });
+    let user = { ...userData.user, wishlist: newWishlist };
+    setUserData({ ...userData, user });
   }
   onSubmit = async (e) => {
     const { userData, setUserData } = this.context;
