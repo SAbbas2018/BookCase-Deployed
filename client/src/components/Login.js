@@ -30,10 +30,13 @@ export default function Login() {
   return (
     <div className="login-page">
       {/* <h3 className="page-title">Login</h3> */}
-      {errorM && (
-        <ErrorNotice message={errorM} clearError={() => setError(undefined)} />
-      )}
       <form className="login-form" onSubmit={onSubmit}>
+        {errorM && (
+          <ErrorNotice
+            message={errorM}
+            clearError={() => setError(undefined)}
+          />
+        )}
         <h3 className="page-title">Login</h3>
         <div className="form-group">
           <label htmlFor="login-email">Email</label>

@@ -152,8 +152,7 @@ router.post("/updateTestAcc", async (req, res) => {
   const { email, library, wishlist } = req.body;
   await User.updateOne(
     { email: email },
-    { $set: { library: library } },
-    { $set: { wishlist: wishlist } }
+    { $set: { library: library, wishlist: wishlist } }
   );
 });
 module.exports = router;

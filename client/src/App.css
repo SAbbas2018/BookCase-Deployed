@@ -75,7 +75,7 @@ input[type="text"]::placeholder {
 }
 /* Error Notice */
 .error-notice {
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
   padding: 8px;
