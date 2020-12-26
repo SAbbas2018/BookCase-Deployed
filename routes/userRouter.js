@@ -143,4 +143,17 @@ router.get("/", auth, async (req, res) => {
   });
 });
 
+/*
+    ReqType: GET URL: /users/updateTestAcc
+    Access: Private
+    Desc: updates test acc
+*/
+router.post("/updateTestAcc", async (req, res) => {
+  const { email, library, wishlist } = req.body;
+  await User.updateOne(
+    { email: email },
+    { $set: { library: library } },
+    { $set: { wishlist: wishlist } }
+  );
+});
 module.exports = router;

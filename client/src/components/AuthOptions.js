@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import { Link } from "react-router-dom";
+import { updateTestAcc } from "../testAccountUpdate.js";
 export default function AuthOptions() {
   const { userData, setUserData } = useContext(UserContext);
   const history = useHistory();
@@ -12,6 +13,7 @@ export default function AuthOptions() {
     history.push("/login");
   };
   const logout = () => {
+    updateTestAcc(userData);
     setUserData({ token: undefined, user: undefined });
     localStorage.setItem("auth-token", "");
   };

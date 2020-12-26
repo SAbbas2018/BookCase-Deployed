@@ -6,7 +6,8 @@
   width: 80%;
 }
 .login-form {
-  width: 80%;
+  width: 60%;
+  height: 60vh;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: auto;
@@ -19,7 +20,16 @@
   margin: auto;
   margin-top: 10px;
 }
-
+.login-page {
+  display: flex;
+  flex-direction: row;
+}
+.test-acc-container {
+  width: 30%;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 1rem;
+}
 input[type="text"]::placeholder {
   text-align: center;
 }
@@ -51,11 +61,18 @@ input[type="text"]::placeholder {
 }
 .auth-buttons {
   width: 33%;
+  margin-right: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .welcome-header {
   text-align: center;
 }
-
+.TestAccount-Home {
+  width: 80%;
+  margin: auto;
+}
 /* Error Notice */
 .error-notice {
   width: 80%;
@@ -193,6 +210,7 @@ input[type="text"]::placeholder {
   .auth-buttons {
     width: 75%;
     margin: 3px auto 0 auto;
+    align-items: center;
   }
   .auth-nav {
     display: flex;
@@ -209,9 +227,16 @@ input[type="text"]::placeholder {
     margin: 6px 5px 3px 5px;
     width: 100%;
   }
+  .test-acc-container {
+    width: 40%;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 0.5em;
+    height: ;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
   .auth-nav {
     justify-content: flex-end;
     padding: 2px;
@@ -221,5 +246,11 @@ input[type="text"]::placeholder {
   .recommendation {
     margin: 6px 5px 3px 5px;
     width: 100%;
+  }
+  .test-acc-container {
+    width: 40%;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 0.5em;
   }
 }

@@ -113,7 +113,7 @@ export default class Wishlist extends Component {
               <input
                 id="wishlist-add"
                 type="text"
-                placeholder="Book ISBN"
+                placeholder="Book ISBN-13"
                 className="form-control"
                 onChange={(e) => this.setIsbn(e.target.value)}
               />

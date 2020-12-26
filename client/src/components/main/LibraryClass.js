@@ -118,7 +118,7 @@ export default class LibraryClass extends Component {
               <input
                 id="library-add"
                 type="text"
-                placeholder="Book ISBN"
+                placeholder="Book ISBN-13"
                 className="form-control"
                 onChange={(e) => this.setIsbn(e.target.value)}
               />

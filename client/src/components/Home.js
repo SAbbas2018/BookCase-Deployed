@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import LibraryClass from "./main/LibraryClass.js";
 import Wishlist from "./main/Wishlist.js";
+import TestAccount from "./main/TestAccount.js";
 // import Recommendation from "./main/Recommendation.js";
 import FunctionalRecommendations from "./main/FunctionalRecommendations";
 export default function Home() {
@@ -23,6 +24,9 @@ export default function Home() {
               userData.user.name.substring(1)}
           </h3>
         </div>
+      )}
+      {userData.user && userData.user.name === "Test Account" && (
+        <TestAccount />
       )}
       {userData.user && (
         <div className="main-homepage-container">

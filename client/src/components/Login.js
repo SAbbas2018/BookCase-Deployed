@@ -28,7 +28,7 @@ export default function Login() {
     }
   };
   return (
-    <div className="page">
+    <div className="login-page">
       {/* <h3 className="page-title">Login</h3> */}
       {errorM && (
         <ErrorNotice message={errorM} clearError={() => setError(undefined)} />
@@ -61,6 +61,19 @@ export default function Login() {
           />
         </div>
       </form>
+      <div className="card test-acc-container">
+        <article className="card-body">
+          <p className="card-title">
+            <strong>Login Information for a Test Account.</strong>
+          </p>
+          <p className="card-text">Email: testaccount@mail.com</p>
+          <p className="card-text">Password: testaccountpassword</p>
+          <p className="card-text">
+            Please copy and paste these into the login form if you wish to demo
+            the app without creating an account.
+          </p>
+        </article>
+      </div>
     </div>
   );
 }
