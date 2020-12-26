@@ -228,11 +228,10 @@ input[type="text"]::placeholder {
     width: 100%;
   }
   .test-acc-container {
-    width: 40%;
+    width: 30%;
     margin: auto;
     margin-top: 10px;
     font-size: 0.5em;
-    height: ;
   }
 }
 
@@ -248,7 +247,7 @@ input[type="text"]::placeholder {
     width: 100%;
   }
   .test-acc-container {
-    width: 40%;
+    width: 30%;
     margin: auto;
     margin-top: 10px;
     font-size: 0.5em;
